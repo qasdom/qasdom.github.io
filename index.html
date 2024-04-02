@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Змейка</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <span class="shield"></span>
+      <div class="game-details">
+        <span class="score">Счет: 0</span>
+
+        <span class="timer">Время: 0</span>
+
+        <span class="high-score">Рекорд: 0</span>
+      </div>
+      <div class="play-board"></div>
+      <div class="controls">
+        <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+        <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
+        <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
+        <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
+      </div>
+      <div class="bombs">
+        <i data-key="ArrowL" class="fa fa-minus"></i>
+        <i data-key="ArrowR" class="fa fa-plus"></i>
+        <i data-key="ArrowLc" class="fa-solid fa-arrow-left"></i>
+        <i data-key="ArrowRc" class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+  </body>
+</html>
