@@ -37,9 +37,16 @@ const updateFoodPosition = () => {
     foodY = Math.floor(Math.random() * 30) + 1;
 }
 const updateBonusPosition = () => {
-    bonusX = Math.floor(Math.random() * 30) + 1;
-    bonusY = Math.floor(Math.random() * 30) + 1;
-    bonusType = Math.floor(Math.random() * 3) + 1;
+    bonusChance = Math.floor(Math.random() * 4) + 1;
+    if(bonusChance === 2){
+        bonusX = Math.floor(Math.random() * 30) + 1;
+        bonusY = Math.floor(Math.random() * 30) + 1;
+        bonusType = Math.floor(Math.random() * 3) + 1;
+    }
+    else {
+        bonusX = -1;
+        bonusY = -1;
+    }
 }
 const updateBombPosition = () => {
     bombsCoordinates = [];
@@ -119,10 +126,7 @@ const initGame = () => {
         updateFoodPosition();
         updateBombPosition();
         updateFruitPosition();
-        bonusChance = Math.floor(Math.random() * 4) + 1;
-        if(bonusChance === 2){
-            updateBonusPosition();
-        }
+        updateBonusPosition();
         snakeBody.push([foodY, foodX]);
         score++;
         highScore = score >= highScore ? score : highScore;
